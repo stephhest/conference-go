@@ -1,6 +1,5 @@
 function createCard(name, description, pictureUrl, location, starts, ends) {
     return `
-    <div class="col">
         <div class="card">
             <img src="${pictureUrl}" class="card-img-top">
             <div class="card-body">
@@ -12,7 +11,6 @@ function createCard(name, description, pictureUrl, location, starts, ends) {
                 </div>
             </div>
         </div>
-    </div>
     `;
   }
 
@@ -58,11 +56,12 @@ window.addEventListener('DOMContentLoaded', async () => {
             let ends = endDate.getMonth() + "/" + endDate.getDate() + "/" + endDate.getFullYear();
 
             const html = createCard(title, description, pictureUrl, location, starts, ends);
+            console.log(html)
+
             const column = document.querySelector('.row');
             column.innerHTML += html;
           }
         }
-
       }
     } catch (e) {
         const html = triggerAlert();
