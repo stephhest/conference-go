@@ -49,14 +49,16 @@ window.addEventListener('DOMContentLoaded', async () => {
             const pictureUrl = details.conference.location.picture_url;
             const location = details.conference.location.name;
 
-            let startDate = new Date(details.conference.starts);
-            let endDate = new Date(details.conference.ends);
+            // let startDate = new Date(details.conference.starts);
+            // let endDate = new Date(details.conference.ends);
+            // let starts = startDate.getMonth() + "/" + startDate.getDate() + "/" + startDate.getFullYear();
+            // let ends = endDate.getMonth() + "/" + endDate.getDate() + "/" + endDate.getFullYear();
 
-            let starts = startDate.getMonth() + "/" + startDate.getDate() + "/" + startDate.getFullYear();
-            let ends = endDate.getMonth() + "/" + endDate.getDate() + "/" + endDate.getFullYear();
+            const starts = new Date(details.conference.starts).toLocaleString().split(",")[0];
+            const ends = new Date(details.conference.ends).toLocaleString().split(",")[0];
 
             const html = createCard(title, description, pictureUrl, location, starts, ends);
-            console.log(html)
+            // console.log(html)
 
             const column = document.querySelector('.row');
             column.innerHTML += html;

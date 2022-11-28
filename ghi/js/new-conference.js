@@ -43,8 +43,8 @@ window.addEventListener('DOMContentLoaded', async () => {
 
         if (response.ok) {
             formTag.reset();
-            const newConferece = await response.json();
-            console.log("New Conference", newConferece);
+            const newConference = await response.json();
+            console.log("New Conference", newConference);
         };
     };
 
