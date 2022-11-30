@@ -1,15 +1,17 @@
 function createCard(name, description, pictureUrl, location, starts, ends) {
     return `
-        <div class="card">
+        <div class="col">
+          <div class="card">
             <img src="${pictureUrl}" class="card-img-top">
             <div class="card-body">
                 <h5 class="card-title">${name}</h5>
                 <h6 class="card-subtitle mb-2 text-muted">${location}</h6>
                 <p class="card-text">${description}</p>
                 <div class="card-footer text-muted">
-                ${starts}-${ends}
+                  <small>${starts}-${ends}</small>
                 </div>
             </div>
+          </div>
         </div>
     `;
   }
