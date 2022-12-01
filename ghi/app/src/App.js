@@ -1,8 +1,8 @@
 import Nav from "./Nav";
-import AttendeesList from './AttendeeList'
+import AttendeesList from './AttendeesList'
 import LocationForm from "./LocationForm";
 import ConferenceForm from "./ConferenceForm";
-import AttendeeForm from "./AttendeeForm";
+import AttendeeForm from "./AttendConferenceForm";
 
 function App(props) {
   if (props.attendees === undefined) {
